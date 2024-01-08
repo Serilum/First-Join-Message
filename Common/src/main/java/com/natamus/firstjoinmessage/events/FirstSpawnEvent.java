@@ -23,11 +23,19 @@ public class FirstSpawnEvent {
 		Player player = (Player)entity;
 		if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
 			String joinmessage = ConfigHandler.firstJoinMessage;
+			String broadcastjoinmessage = ConfigHandler.firstJoinBroadcastMessage;
+
 			ChatFormatting colour = ChatFormatting.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
+			ChatFormatting broadcastcolour = ChatFormatting.getById(ConfigHandler.firstJoinBroadcastMessageTextFormattingColourIndex);
+
+			if (broadcastcolour == null){
+				broadcastcolour = colour;
+			}
 			if (colour == null) {
 				return;
 			}
 			
+			StringFunctions.broadcastMessage(world, broadcastjoinmessage, broadcastcolour);
 			StringFunctions.sendMessage(player, joinmessage, colour);
 		}
 	}
