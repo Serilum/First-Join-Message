@@ -23,14 +23,16 @@ public class FirstSpawnEvent {
 		if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
 			String joinMessage = ConfigHandler.firstJoinMessage;
 			String broadcastJoinMessage = ConfigHandler.firstJoinBroadcastMessage;
+			Boolean useBroadcastMessage = ConfigHandler.useBroadcastMessage;
+			Boolean usePlayerMessage = ConfigHandler.usePlayerMessage;
 			ChatFormatting colour = ChatFormatting.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
 			ChatFormatting broadcastColour = ChatFormatting.getById(ConfigHandler.firstJoinBroadcastMessageTextFormattingColourIndex);
 
-			if (!broadcastJoinMessage.isBlank() && !(broadcastColour == null && colour == null)) {
-				StringFunctions.broadcastMessage(world, broadcastJoinMessage, broadcastColour == null ? colour : broadcastColour);
+			if (useBroadcastMessage && !broadcastJoinMessage.isBlank() && !(broadcastColour == null && colour == null)) {
+				StringFunctions.broadcastMessage(world, broadcastJoinMessage.replace("%username%", player.getDisplayName().getString()), broadcastColour == null ? colour : broadcastColour);
 			}
-			if (!joinMessage.isBlank() && colour != null) {
-				StringFunctions.sendMessage(player, joinMessage, colour);
+			if (usePlayerMessage && !joinMessage.isBlank() && colour != null) {
+				StringFunctions.sendMessage(player, joinMessage.replace("%username%", player.getDisplayName().getString()), colour);
 			}
 		}
 	}
