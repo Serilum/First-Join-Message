@@ -1,9 +1,11 @@
 package com.natamus.firstjoinmessage;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.firstjoinmessage.cmds.CommandForget;
 import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
 import com.natamus.firstjoinmessage.util.Reference;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
@@ -24,6 +26,10 @@ public class ModFabric implements ModInitializer {
 		ServerEntityEvents.ENTITY_LOAD.register((Entity entity, ServerLevel world) -> {
 			FirstSpawnEvent.onSpawn(world, entity);
 		});
+
+		CommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess, environment) -> {
+			CommandForget.register(dispatcher);
+		}));
 	}
 
 	private static void setGlobalConstants() {
