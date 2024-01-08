@@ -16,16 +16,16 @@ public class ConfigHandler extends DuskConfig {
 	@Entry(min = 0, max = 15) public static int firstJoinBroadcastMessageTextFormattingColourIndex = 2;
 
 	public static void initConfig() {
-		configMetaData.put("firstJoinMessage", Arrays.asList(
+		configMetaData.put("firstJoinMessage", List.of(
 			"The message players will receive when they join a world for the first time."
 		));
-		configMetaData.put("firstJoinBroadcastMessage", Arrays.asList(
+		configMetaData.put("firstJoinBroadcastMessage", List.of(
 				"The message all players will receive when a new player joins a world for the first time."
 		));
-		configMetaData.put("firstJoinMessageTextFormattingColourIndex", Arrays.asList(
+		configMetaData.put("firstJoinMessageTextFormattingColourIndex", List.of(
 			"The colour of the message. The possible values are; 0: black, 1: dark_blue, 2: dark_green, 3: dark_aqua, 4: dark_red, 5: dark_purple, 6: gold, 7: gray, 8: dark_gray, 9: blue, 10: green, 11: aqua, 12: red, 13: light_purple, 14: yellow, 15: white."
 		));
-		configMetaData.put("firstJoinBroadcastMessageTextFormattingColourIndex", Arrays.asList(
+		configMetaData.put("firstJoinBroadcastMessageTextFormattingColourIndex", List.of(
 				"The colour of the broadcasted message. The possible values are; 0: black, 1: dark_blue, 2: dark_green, 3: dark_aqua, 4: dark_red, 5: dark_purple, 6: gold, 7: gray, 8: dark_gray, 9: blue, 10: green, 11: aqua, 12: red, 13: light_purple, 14: yellow, 15: white."
 		));
 

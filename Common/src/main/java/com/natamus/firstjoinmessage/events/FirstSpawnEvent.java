@@ -15,28 +15,24 @@ public class FirstSpawnEvent {
 		if (world.isClientSide) {
 			return;
 		}
-		
-		if (!(entity instanceof Player)) {
+
+		if (!(entity instanceof Player player)) {
 			return;
 		}
-		
-		Player player = (Player)entity;
+
 		if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
-			String joinmessage = ConfigHandler.firstJoinMessage;
-			String broadcastjoinmessage = ConfigHandler.firstJoinBroadcastMessage;
-
+			String joinMessage = ConfigHandler.firstJoinMessage;
+			String broadcastJoinMessage = ConfigHandler.firstJoinBroadcastMessage;
 			ChatFormatting colour = ChatFormatting.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
-			ChatFormatting broadcastcolour = ChatFormatting.getById(ConfigHandler.firstJoinBroadcastMessageTextFormattingColourIndex);
+			ChatFormatting broadcastColour = ChatFormatting.getById(ConfigHandler.firstJoinBroadcastMessageTextFormattingColourIndex);
 
-			if (broadcastcolour == null){
-				broadcastcolour = colour;
+			if (!broadcastJoinMessage.isBlank() && !(broadcastColour == null && colour == null)) {
+				StringFunctions.broadcastMessage(world, broadcastJoinMessage, broadcastColour == null ? colour : broadcastColour);
 			}
-			if (colour == null) {
-				return;
+			if (!joinMessage.isBlank() && colour != null) {
+				StringFunctions.sendMessage(player, joinMessage, colour);
 			}
-			
-			StringFunctions.broadcastMessage(world, broadcastjoinmessage, broadcastcolour);
-			StringFunctions.sendMessage(player, joinmessage, colour);
 		}
 	}
 }
+
