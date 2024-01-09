@@ -1,6 +1,6 @@
 package com.natamus.firstjoinmessage.neoforge.events;
 
-import com.natamus.firstjoinmessage.cmds.CommandForget;
+import com.natamus.firstjoinmessage.cmds.CommandsFirstJoin;
 import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
@@ -16,6 +16,6 @@ public class NeoForgeFirstSpawnEvent {
 
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent e) {
-		CommandForget.register(e.getDispatcher());
+		CommandsFirstJoin.register(e.getDispatcher());
 	}
 }

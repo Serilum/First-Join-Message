@@ -1,6 +1,6 @@
 package com.natamus.firstjoinmessage.forge.events;
 
-import com.natamus.firstjoinmessage.cmds.CommandForget;
+import com.natamus.firstjoinmessage.cmds.CommandsFirstJoin;
 import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
@@ -16,6 +16,6 @@ public class ForgeFirstSpawnEvent {
 
 	@SubscribeEvent
 	public void registerCommands(RegisterCommandsEvent e) {
-		CommandForget.register(e.getDispatcher());
+		CommandsFirstJoin.register(e.getDispatcher());
 	}
 }

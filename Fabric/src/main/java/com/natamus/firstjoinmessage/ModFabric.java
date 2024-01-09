@@ -1,7 +1,7 @@
 package com.natamus.firstjoinmessage;
 
 import com.natamus.collective.check.RegisterMod;
-import com.natamus.firstjoinmessage.cmds.CommandForget;
+import com.natamus.firstjoinmessage.cmds.CommandsFirstJoin;
 import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
 import com.natamus.firstjoinmessage.util.Reference;
 import net.fabricmc.api.ModInitializer;
@@ -28,7 +28,7 @@ public class ModFabric implements ModInitializer {
 		});
 
 		CommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess, environment) -> {
-			CommandForget.register(dispatcher);
+			CommandsFirstJoin.register(dispatcher);
 		}));
 	}
 

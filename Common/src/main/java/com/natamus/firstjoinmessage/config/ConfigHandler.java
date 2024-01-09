@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ConfigHandler extends DuskConfig {
-	public static HashMap<String, List<String>> configMetaData = new HashMap<String, List<String>>();
+	public static HashMap<String, List<String>> configMetaData = new HashMap<>();
 	@Entry public static Boolean useBroadcastMessage = false;
 	@Entry public static String firstJoinMessage = "You wake up in an unfamiliar place.";
 	@Entry public static String firstJoinBroadcastMessage = "%username% just joined the server for the first time.";
 	@Entry public static Boolean usePlayerMessage = true;
 	@Entry(min = 0, max = 15) public static int firstJoinMessageTextFormattingColourIndex = 2;
-	@Entry(min = 0, max = 15) public static int firstJoinBroadcastMessageTextFormattingColourIndex = 2;
+	@Entry(min = 0, max = 15) public static int firstJoinBroadcastMessageTextFormattingColourIndex = 3;
 
 	public static void initConfig() {
 		configMetaData.put("usePlayerMessage", List.of(
