@@ -1,27 +1,45 @@
 package com.natamus.firstjoinmessage.events;
 
+import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
-import com.natamus.firstjoinmessage.util.MessageFunctions;
+import com.natamus.collective.functions.StringFunctions;
+import com.natamus.firstjoinmessage.config.ConfigHandler;
 import com.natamus.firstjoinmessage.util.Reference;
+
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-import java.util.List;
-
 public class FirstSpawnEvent {
-  public static void onSpawn(Level world, Entity entity) {
-    if (world.isClientSide) {
-      return;
-    }
+	public static void onSpawn(Level level, Entity entity) {
+		if (level.isClientSide) {
+			return;
+		}
+		
+		if (!(entity instanceof Player)) {
+			return;
+		}
+		
+		Player player = (Player)entity;
+		if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
+			if (!ConfigHandler.firstJoinMessage.equals("")) {
+				ChatFormatting colour = ChatFormatting.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
+				if (colour == null) {
+					return;
+				}
 
-    if (!(entity instanceof Player player)) {
-      return;
-    }
+				StringFunctions.sendMessage(player, ConfigHandler.firstJoinMessage, colour);
+			}
 
-    if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
-      MessageFunctions.sendBroadcastMessage(List.of(player));
-      MessageFunctions.sendPrivateMessage(List.of(player));
-    }
-  }
+			if (!ConfigHandler.serverBroadcastMessage.equals("")) {
+				ChatFormatting colour = ChatFormatting.getById(ConfigHandler.serverBroadcastMessageTextFormattingColourIndex);
+				if (colour == null) {
+					return;
+				}
+
+				MessageFunctions.broadcastMessage(level, ConfigHandler.serverBroadcastMessage, colour);
+			}
+		}
+	}
 }
