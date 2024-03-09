@@ -2,7 +2,7 @@ package com.natamus.firstjoinmessage.events;
 
 import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.firstjoinmessage.config.ConfigHandler;
 import com.natamus.firstjoinmessage.util.Reference;
 
@@ -29,7 +29,7 @@ public class FirstSpawnEvent {
 					return;
 				}
 
-				StringFunctions.sendMessage(player, ConfigHandler.firstJoinMessage, colour);
+				MessageFunctions.sendMessage(player, ConfigHandler.firstJoinMessage, colour);
 			}
 
 			if (!ConfigHandler.serverBroadcastMessage.equals("")) {
