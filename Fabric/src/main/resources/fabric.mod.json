@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "firstjoinmessage",
-  "version": "3.4",
+  "version": "3.5",
 
   "name": "First Join Message",
   "description": "Sends players who join a world for the first time a configurable message.",
@@ -38,7 +38,7 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://ricksouth.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
 	  " ",
 	  "Membership sponsors:",
 	  " Alister",
