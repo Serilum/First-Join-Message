@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "firstjoinmessage",
+  "version": "3.5",
+
+  "name": "First Join Message",
+  "description": "Sends players who join a world for the first time a configurable message.",
+  "authors": [ "Rick South" ],
+  "contact": {
+    "homepage": "https://serilum.com/mod/first-join-message",
+    "sources": "https://github.com/Serilum/First-Join-Message",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20First%20Join%20Message"
+  },
+
+  "license": "All Right Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": { "main": [ "com.natamus.firstjoinmessage.ModFabric" ], "modmenu": [ "com.natamus.firstjoinmessage.fabric.config.IntegrateModMenu" ] },
+
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric": "*",
+    "minecraft": ">=1.20",
+    "java": ">=21",
+    "collective": ">=7.55"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Donate <3" : "https://ricksouth.com/donate"
+      }
+    }
+  },
+
+  "contributors": [
+	  " ",
+	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
+	  " ",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  " ",
+	  "Membership sponsors:",
+	  " Alister",
+	  " Andrean Olgo",
+	  " aternosorg",
+	  " BirdieMiner",
+	  " Cherriesaurus",
+	  " Jack",
+	  " Jeremy Langford",
+	  " Michael W. S.",
+	  " pepe1191",
+	  " Shana Gitnick",
+	  " Tyler Behl"
+  ]
+}
