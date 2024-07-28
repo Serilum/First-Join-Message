@@ -1,6 +1,7 @@
 package com.natamus.firstjoinmessage;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
 import com.natamus.firstjoinmessage.util.Reference;
 import net.fabricmc.api.ModInitializer;
@@ -12,6 +13,10 @@ public class ModFabric implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		setGlobalConstants();
 		ModCommon.init();
 
