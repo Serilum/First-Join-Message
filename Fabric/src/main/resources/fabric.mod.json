@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "firstjoinmessage",
-  "version": "3.7",
+  "version": "3.8",
 
   "name": "First Join Message",
   "description": "Sends players who join a world for the first time a configurable message.",
@@ -23,7 +23,7 @@
     "fabric": "*",
     "minecraft": ">=1.21",
     "java": ">=21",
-    "collective": ">=7.91"
+    "collective": ">=8.3"
   },
 
   "custom": {
@@ -45,8 +45,6 @@
 	  " Andrean Olgo",
 	  " aternosorg",
 	  " Cherriesaurus",
-	  " David Sanchez",
-	  " drdog111",
 	  " Michael W. S.",
 	  " t128",
 	  " Tyler Behl",
