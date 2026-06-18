@@ -1,5 +1,6 @@
 package com.natamus.firstjoinmessage.events;
 
+import com.natamus.collective.functions.ColourFunctions;
 import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
 import com.natamus.firstjoinmessage.config.ConfigHandler;
@@ -21,7 +22,7 @@ public class FirstSpawnEvent {
 
         if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
 			if (!ConfigHandler.firstJoinMessage.isEmpty()) {
-				ChatFormatting colour = ChatFormatting.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
+				ChatFormatting colour = ColourFunctions.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
 				if (colour == null) {
 					return;
 				}
@@ -30,7 +31,7 @@ public class FirstSpawnEvent {
 			}
 
 			if (!ConfigHandler.serverBroadcastMessage.isEmpty()) {
-				ChatFormatting colour = ChatFormatting.getById(ConfigHandler.serverBroadcastMessageTextFormattingColourIndex);
+				ChatFormatting colour = ColourFunctions.getById(ConfigHandler.serverBroadcastMessageTextFormattingColourIndex);
 				if (colour == null) {
 					return;
 				}
