@@ -1,9 +1,9 @@
-package com.natamus.firstjoinmessage.events;
+package com.serilum.firstjoinmessage.events;
 
 import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
-import com.natamus.firstjoinmessage.config.ConfigHandler;
-import com.natamus.firstjoinmessage.util.Reference;
+import com.serilum.firstjoinmessage.config.ConfigHandler;
+import com.serilum.firstjoinmessage.util.Reference;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -19,7 +19,7 @@ public class FirstSpawnEvent {
 			return;
 		}
 
-        if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
+		if (PlayerFunctions.isJoiningWorldForTheFirstTime(player, Reference.MOD_ID)) {
 			if (!ConfigHandler.firstJoinMessage.isEmpty()) {
 				ChatFormatting colour = ChatFormatting.getById(ConfigHandler.firstJoinMessageTextFormattingColourIndex);
 				if (colour == null) {

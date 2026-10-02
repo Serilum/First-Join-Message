@@ -1,7 +1,7 @@
-package com.natamus.firstjoinmessage.forge.config;
+package com.serilum.firstjoinmessage.forge.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.firstjoinmessage.util.Reference;
+import com.serilum.firstjoinmessage.util.Reference;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 

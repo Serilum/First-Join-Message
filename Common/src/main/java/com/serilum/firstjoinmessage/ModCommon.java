@@ -1,6 +1,6 @@
-package com.natamus.firstjoinmessage;
+package com.serilum.firstjoinmessage;
 
-import com.natamus.firstjoinmessage.config.ConfigHandler;
+import com.serilum.firstjoinmessage.config.ConfigHandler;
 
 public class ModCommon {
 

@@ -1,6 +1,6 @@
-package com.natamus.firstjoinmessage.forge.events;
+package com.serilum.firstjoinmessage.forge.events;
 
-import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
+import com.serilum.firstjoinmessage.events.FirstSpawnEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 

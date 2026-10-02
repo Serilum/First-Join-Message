@@ -1,9 +1,9 @@
-package com.natamus.firstjoinmessage;
+package com.serilum.firstjoinmessage;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.firstjoinmessage.events.FirstSpawnEvent;
-import com.natamus.firstjoinmessage.util.Reference;
+import com.serilum.firstjoinmessage.events.FirstSpawnEvent;
+import com.serilum.firstjoinmessage.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.server.level.ServerLevel;

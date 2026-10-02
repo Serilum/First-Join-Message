@@ -1,10 +1,10 @@
-package com.natamus.firstjoinmessage;
+package com.serilum.firstjoinmessage;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.firstjoinmessage.forge.config.IntegrateForgeConfig;
-import com.natamus.firstjoinmessage.forge.events.ForgeFirstSpawnEvent;
-import com.natamus.firstjoinmessage.util.Reference;
+import com.serilum.firstjoinmessage.forge.config.IntegrateForgeConfig;
+import com.serilum.firstjoinmessage.forge.events.ForgeFirstSpawnEvent;
+import com.serilum.firstjoinmessage.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -32,7 +32,7 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-    	MinecraftForge.EVENT_BUS.register(ForgeFirstSpawnEvent.class);
+		MinecraftForge.EVENT_BUS.register(ForgeFirstSpawnEvent.class);
 	}
 
 	private static void setGlobalConstants() {

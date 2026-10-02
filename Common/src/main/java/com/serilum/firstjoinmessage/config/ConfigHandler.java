@@ -1,7 +1,7 @@
-package com.natamus.firstjoinmessage.config;
+package com.serilum.firstjoinmessage.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.firstjoinmessage.util.Reference;
+import com.serilum.firstjoinmessage.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;
